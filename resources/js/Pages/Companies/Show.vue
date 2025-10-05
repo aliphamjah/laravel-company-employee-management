@@ -1,3 +1,3 @@
 <template>
-  <div>Companies Show</div>
+  <div>Company Details - Feature Coming Soon</div>
 </template>

@@ -31,9 +31,9 @@ const isAdmin = computed(() => page.props.auth.user.email === 'admin@grtech.com'
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                                 <a 
                                     href="/companies" 
-                                    class="block p-6 bg-blue-50 border border-blue-200 rounded-lg hover:bg-blue-100 transition"
+                                    class="block p-6 bg-orange-50 border border-orange-200 rounded-lg hover:bg-orange-100 transition"
                                 >
-                                    <h4 class="text-xl font-semibold text-blue-700 mb-2">
+                                    <h4 class="text-xl font-semibold text-orange-700 mb-2">
                                         Manage Companies
                                     </h4>
                                     <p class="text-gray-600">
@@ -43,9 +43,9 @@ const isAdmin = computed(() => page.props.auth.user.email === 'admin@grtech.com'
                                 
                                 <a 
                                     href="/employees" 
-                                    class="block p-6 bg-green-50 border border-green-200 rounded-lg hover:bg-green-100 transition"
+                                    class="block p-6 bg-orange-50 border border-orange-200 rounded-lg hover:bg-orange-100 transition"
                                 >
-                                    <h4 class="text-xl font-semibold text-green-700 mb-2">
+                                    <h4 class="text-xl font-semibold text-orange-700 mb-2">
                                         Manage Employees
                                     </h4>
                                     <p class="text-gray-600">

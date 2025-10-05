@@ -87,8 +87,8 @@ const submit = () => {
                     Forgot your password?
                 </Link>
 
-                <PrimaryButton
-                    class="ms-4"
+                <PrimaryButton 
+                    class="ms-4 bg-orange-500 hover:bg-orange-600 focus:bg-orange-600 active:bg-orange-700"
                     :class="{ 'opacity-25': form.processing }"
                     :disabled="form.processing"
                 >

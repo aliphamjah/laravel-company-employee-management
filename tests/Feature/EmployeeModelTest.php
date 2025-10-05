@@ -20,7 +20,7 @@ class EmployeeModelTest extends TestCase
             'first_name' => 'Alip',
             'last_name' => 'Hamjah',
             'company_id' => $company->id,
-            'email' => 'john@example.com',
+            'email' => 'alip@example.com',
             'phone' => '1234567890',
         ]);
 

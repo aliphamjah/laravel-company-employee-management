@@ -6,6 +6,7 @@ use App\Models\Employee;
 use App\Models\Company;
 use App\Http\Requests\StoreEmployeeRequest;
 use App\Http\Requests\UpdateEmployeeRequest;
+use App\Notifications\NewEmployeeAdded;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -49,7 +50,16 @@ class EmployeeController extends Controller
      */
     public function store(StoreEmployeeRequest $request)
     {
-        Employee::create($request->validated());
+        // Create employee
+        $employee = Employee::create($request->validated());
+        
+        // Load the company relationship
+        $employee->load('company');
+        
+        // Send notification to company if email exists
+        if ($employee->company && $employee->company->email) {
+            $employee->company->notify(new NewEmployeeAdded($employee, $employee->company));
+        }
 
         return redirect()->route('employees.index')
             ->with('success', 'Employee created successfully.');

@@ -29,12 +29,12 @@ defineProps({
                         >
                             Sign In
                         </Link>
-                        <Link
+                        <!-- <Link
                             :href="route('login')"
                             class="px-6 py-2 bg-orange-500 text-white rounded-lg hover:bg-orange-600 font-medium transition shadow-sm"
                         >
                             Get Started
-                        </Link>
+                        </Link> -->
                     </div>
                 </div>
             </div>

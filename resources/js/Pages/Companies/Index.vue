@@ -138,8 +138,8 @@ const handleTableChange = (pagination) => {
                             @change="handleTableChange"
                             :row-key="record => record.id"
                         >
-                            <!-- Logo Column -->
                             <template #bodyCell="{ column, record }">
+                                <!-- Logo Column -->
                                 <template v-if="column.key === 'logo'">
                                     <img
                                         v-if="record.logo"

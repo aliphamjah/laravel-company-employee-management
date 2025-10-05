@@ -86,7 +86,7 @@ const handleTableChange = (pagination) => {
     <AuthenticatedLayout>
         <template #header>
             <div class="flex justify-between items-center">
-                <h2 class="font-semibold text-xl text-gray-800 leading-tight">Employees</h2>
+                <h2 class="font-semibold text-xl text-gray-800 leading-tight">Employees Management</h2>
                 <Link :href="route('employees.create')">
                     <a-button type="primary" :icon="h(PlusOutlined)">Add Employee</a-button>
                 </Link>

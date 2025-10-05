@@ -87,7 +87,7 @@ defineProps({
         <!-- Footer -->
         <footer class="bg-gray-900 text-gray-400 py-8">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <p>© 2024 CompanyHub. Built with Laravel 12 & Vue 3.</p>
+                <p>©2025 Company. Built with Laravel 12 & Vue 3.</p>
             </div>
         </footer>
     </div>

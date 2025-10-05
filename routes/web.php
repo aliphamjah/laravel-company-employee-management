@@ -24,4 +24,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+// Test route for AdminMiddleware
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/test', function () {
+        return response('Admin Dashboard', 200);
+    });
+});
+
 require __DIR__.'/auth.php';

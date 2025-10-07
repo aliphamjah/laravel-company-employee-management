@@ -140,6 +140,7 @@ const submit = () => {
                                         type="primary"
                                         html-type="submit"
                                         size="large"
+                                        class="bg-orange-500 hover:bg-orange-600 border-orange-500"
                                         :loading="form.processing"
                                     >
                                         Update Company

@@ -86,9 +86,11 @@ const handleTableChange = (pagination) => {
     <AuthenticatedLayout>
         <template #header>
             <div class="flex justify-between items-center">
-                <h2 class="font-semibold text-xl text-gray-800 leading-tight">Employees Management</h2>
+                <h2 class="font-semibold text-xl text-gray-800 leading-tight">Employee Management</h2>
                 <Link :href="route('employees.create')">
-                    <a-button type="primary" :icon="h(PlusOutlined)">Add Employee</a-button>
+                    <a-button type="primary" class="bg-orange-500 hover:bg-orange-600 border-orange-500" :icon="h(PlusOutlined)">
+                        Add Employee
+                    </a-button>
                 </Link>
             </div>
         </template>
@@ -127,14 +129,14 @@ const handleTableChange = (pagination) => {
                                     </span>
                                 </template>
 
-                                <template v-else-if="column.key === 'company'"
-                                    href="javascript:void(0)"
-                                    @click="showCompanyModal(record.company)"
-                                    class="text-blue-600 hover:underline"
-                                >
-                                    <span class="font-medium">
+                                <template v-else-if="column.key === 'company'">
+                                    <a
+                                        href="javascript:void(0)"
+                                        @click="showCompanyModal(record.company)"
+                                        class="text-orange-600 hover:text-orange-700 hover:underline font-medium"
+                                    >
                                         {{ record.company.name }}
-                                    </span>
+                                    </a>
                                 </template>
 
                                 <template v-else-if="column.key === 'email'">
@@ -150,15 +152,25 @@ const handleTableChange = (pagination) => {
                                 <template v-else-if="column.key === 'action'">
                                     <a-space>
                                         <Link :href="route('employees.edit', record.id)">
-                                            <a-button type="primary" size="small" :icon="h(EditOutlined)">Edit</a-button>
+                                            <a-button 
+                                                type="primary" 
+                                                size="small" 
+                                                class="bg-orange-500 hover:bg-orange-600 border-orange-500"
+                                                :icon="h(EditOutlined)"
+                                            >
+                                                Edit
+                                            </a-button>
                                         </Link>
                                         <a-button
                                             type="primary"
                                             danger
                                             size="small"
+                                            class="bg-red-500 hover:bg-red-600 border-red-500"
                                             :icon="h(DeleteOutlined)"
                                             @click="handleDelete(record)"
-                                        >Delete</a-button>
+                                        >
+                                            Delete
+                                        </a-button>
                                     </a-space>
                                 </template>
                             </template>

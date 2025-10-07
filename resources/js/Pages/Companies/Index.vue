@@ -100,9 +100,9 @@ const handleTableChange = (pagination) => {
     <AuthenticatedLayout>
         <template #header>
             <div class="flex justify-between items-center">
-                <h2 class="font-semibold text-xl text-gray-800 leading-tight">Companies Management</h2>
+                <h2 class="font-semibold text-xl text-gray-800 leading-tight">Company Management</h2>
                 <Link :href="route('companies.create')">
-                    <a-button type="primary" :icon="h(PlusOutlined)">
+                    <a-button type="primary" class="bg-orange-500 hover:bg-orange-600 border-orange-500" :icon="h(PlusOutlined)">
                         Add Company
                     </a-button>
                 </Link>
@@ -173,9 +173,10 @@ const handleTableChange = (pagination) => {
                                 <template v-else-if="column.key === 'action'">
                                     <a-space>
                                         <Link :href="route('companies.edit', record.id)">
-                                            <a-button
-                                                type="primary"
-                                                size="small"
+                                            <a-button 
+                                                type="primary" 
+                                                size="small" 
+                                                class="bg-orange-500 hover:bg-orange-600 border-orange-500"
                                                 :icon="h(EditOutlined)"
                                             >
                                                 Edit
@@ -185,6 +186,7 @@ const handleTableChange = (pagination) => {
                                             type="primary"
                                             danger
                                             size="small"
+                                            class="bg-red-500 hover:bg-red-600 border-red-500"
                                             :icon="h(DeleteOutlined)"
                                             @click="handleDelete(record)"
                                         >

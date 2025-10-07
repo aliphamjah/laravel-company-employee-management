@@ -80,16 +80,15 @@ const submit = () => {
 
             <div class="mt-4 flex items-center justify-end">
                 <Link
-                    v-if="canResetPassword"
                     :href="route('password.request')"
-                    class="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    class="underline text-sm text-orange-600 hover:text-orange-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
                 >
                     Forgot your password?
                 </Link>
 
                 <PrimaryButton 
-                    class="ms-4 bg-orange-500 hover:bg-orange-600 focus:bg-orange-600 active:bg-orange-700"
-                    :class="{ 'opacity-25': form.processing }"
+                    class="ms-4 bg-orange-500 hover:bg-orange-600 focus:bg-orange-700 active:bg-orange-800 focus:ring-orange-500" 
+                    :class="{ 'opacity-25': form.processing }" 
                     :disabled="form.processing"
                 >
                     Log in

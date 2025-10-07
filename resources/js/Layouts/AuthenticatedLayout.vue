@@ -33,17 +33,29 @@ const isAdmin = computed(() => page.props.auth.user?.email === 'admin@grtech.com
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                <NavLink :href="route('dashboard')" :active="route().current('dashboard')">
+                                <NavLink 
+                                    :href="route('dashboard')" 
+                                    :active="route().current('dashboard')"
+                                    :class="{ 'border-orange-500 text-gray-900': route().current('dashboard') }"
+                                >
                                     Dashboard
                                 </NavLink>
                                 
                                 <!-- Admin Only Links -->
                                 <template v-if="isAdmin">
-                                    <NavLink :href="route('companies.index')" :active="route().current('companies.*')">
-                                        Companies
+                                    <NavLink 
+                                        :href="route('companies.index')" 
+                                        :active="route().current('companies.*')"
+                                        :class="{ 'border-orange-500 text-gray-900': route().current('companies.*') }"
+                                    >
+                                        Company
                                     </NavLink>
-                                    <NavLink :href="route('employees.index')" :active="route().current('employees.*')">
-                                        Employees
+                                    <NavLink 
+                                        :href="route('employees.index')" 
+                                        :active="route().current('employees.*')"
+                                        :class="{ 'border-orange-500 text-gray-900': route().current('employees.*') }"
+                                    >
+                                        Employee
                                     </NavLink>
                                 </template>
                             </div>
